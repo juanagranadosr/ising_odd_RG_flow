@@ -1,0 +1,18 @@
+# Core numerical and ML libraries
+jax[cpu]>=0.4.1        # JAX for accelerated array computing and JIT compilation
+jaxlib>=0.4.1          # JAX backend
+flax>=0.7.0            # Provides avg_pool used in Kadanoff blocking
+optax>=0.1.7           # Gradient-based optimizers (Adam, gradient descent)
+
+# Scientific Python stack
+numpy>=1.24.0
+scipy>=1.10.0          # Used for convolve2d in local field computation
+matplotlib>=3.7.0      # Plotting
+seaborn>=0.12.0        # Color palettes for loss landscape plots
+
+# Utilities
+tqdm>=4.65.0           # Progress bars for gradient descent loops
+
+# Jupyter (for running the notebook locally)
+jupyter>=1.0.0
+ipykernel>=6.0.0

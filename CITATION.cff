@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+message: >
+  If you use this code, please cite both the original work by Di Carlo
+  (on which this is based) and this repository.
+
+# ---------------------------------------------------------------
+# CITATION 1: Original method and base code by Di Carlo
+# This repository is an extension of:
+# https://github.com/lucadic/IsingCG
+# ---------------------------------------------------------------
+references:
+  - type: article
+    authors:
+      - family-names: Di Carlo
+        given-names: Luca
+    title: >
+      Coarse-graining the Ising model with the inverse Ising problem
+    year: 2024
+    url: https://arxiv.org/abs/2401.04811
+    repository-code: https://github.com/lucadic/IsingCG
+    notes: >
+      The base Monte Carlo sampling, Kadanoff blocking, and
+      pseudo-likelihood inference code is taken from this work.
+      The present repository extends it by adding Z2-odd operators
+      (magnetic field h and three-spin coupling h3) to both the
+      forward simulation and the inverse inference.
+
+# ---------------------------------------------------------------
+# CITATION 2: This repository (master's thesis extension)
+# ---------------------------------------------------------------
+title: >
+  ising_odd_RG_flow: Tracking Z2-odd operators under RG flow
+  in the 2D Ising model
+authors:
+  - family-names: Granados
+    given-names: Juana
+    # add your ORCID here if you have one:
+    # orcid: https://orcid.org/XXXX-XXXX-XXXX-XXXX
+type: software
+version: 1.0.0
+date-released: 2025
+repository-code: https://github.com/juanagranadosr/ising_odd_RG_flow
+abstract: >
+  Extension of Di Carlo's IsingCG repository to include Z2-odd
+  operators (magnetic field h and three-spin coupling h3) in both
+  the Monte Carlo forward simulation and the pseudo-likelihood
+  inverse Ising inference. Used to numerically study symmetry
+  protection of odd operators under Kadanoff block-spin
+  renormalization group flow. Developed as part of a master's
+  thesis on the hierarchy problem and GOOFY symmetries.
+keywords:
+  - Ising model
+  - renormalization group
+  - symmetry protection
+  - inverse Ising
+  - pseudo-likelihood
+  - JAX
+  - Monte Carlo
+  - hierarchy problem
+license: MIT
