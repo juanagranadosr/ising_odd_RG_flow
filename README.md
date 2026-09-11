@@ -130,7 +130,7 @@ Every notebook loads the library with:
 
 `ising_cg_path` is a leftover from the original author's Drive layout. Point it at this repo's `src/` folder instead (e.g. `/content/ising_odd_RG_flow/src` on Colab after cloning, or the local absolute path to `src/`). `from IsingRG import *` will then resolve via `src/IsingRG.py`, a one-line shim that re-exports `src/IsingRG_3spin.py` — kept so the notebooks' import statements didn't need to be edited.
 
-**On Google Colab (recommended):**
+**On Google Colab** (used for the original runs, since local hardware wasn't powerful enough for them):
 
 Open notebooks/MeasureRGFlow_odd_operators_template.ipynb directly in Colab, clone or upload this repository into the session (or mount your Drive), and update `ising_cg_path` as above to point at its `src/` folder.
 
