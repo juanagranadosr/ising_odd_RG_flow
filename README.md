@@ -81,7 +81,8 @@ where tau_n^t = sigma_n(t) / (1 + exp(2 H_n sigma_n(t))).
     |   |-- TFM_templateNotes.bib
     |   |-- jheppub.sty
     |-- src/
-    |   |-- IsingRG_3spin.py
+    |   |-- IsingRG_3spin.py           # extended Hamiltonian library
+    |   |-- IsingRG.py                 # thin `from IsingRG_3spin import *` shim, see below
     |-- notebooks/
     |   |-- MeasureRGFlow_odd_operators_template.ipynb   # generic notebook: set h near the top and run
     |   |-- runs/                       # executed runs, one subfolder per h0 value, run on Google Colab
@@ -121,9 +122,17 @@ where tau_n^t = sigma_n(t) / (1 + exp(2 H_n sigma_n(t))).
 
 **To reproduce or extend the results:** use `notebooks/MeasureRGFlow_odd_operators_template.ipynb`, the generic version of the notebook. Set `h` (and `h3`) near the top to the value you want to simulate and run the whole notebook — this is exactly how each of the `notebooks/runs/h0_*/` notebooks was produced. The full runs (L = 240, ~7000 gradient descent iterations per block size) were done on Google Colab; reproducing them locally requires comparable compute.
 
+Every notebook loads the library with:
+
+    ising_cg_path = '/content/drive/ColabNotebooks/IsingCG-main'  # <- change this
+    sys.path.append(ising_cg_path)
+    from IsingRG import *
+
+`ising_cg_path` is a leftover from the original author's Drive layout. Point it at this repo's `src/` folder instead (e.g. `/content/ising_odd_RG_flow/src` on Colab after cloning, or the local absolute path to `src/`). `from IsingRG import *` will then resolve via `src/IsingRG.py`, a one-line shim that re-exports `src/IsingRG_3spin.py` — kept so the notebooks' import statements didn't need to be edited.
+
 **On Google Colab (recommended):**
 
-Open notebooks/MeasureRGFlow_odd_operators_template.ipynb directly in Colab. Upload src/IsingRG_3spin.py to the Colab session or mount your Drive. No local installation needed.
+Open notebooks/MeasureRGFlow_odd_operators_template.ipynb directly in Colab, clone or upload this repository into the session (or mount your Drive), and update `ising_cg_path` as above to point at its `src/` folder.
 
 **Locally:**
 
