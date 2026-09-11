@@ -59,11 +59,11 @@ The gradients for the new couplings are:
 
 where tau_n^t = sigma_n(t) / (1 + exp(2 H_n sigma_n(t))).
 
-**notebooks/MeasureRGFlow_odd_operators.ipynb** (modified from Di Carlo's MeasureRGFlow.ipynb):
+**notebooks/MeasureRGFlow_odd_operators_template.ipynb** and **notebooks/runs/h0_\*/MeasureRGFlow_odd_operators.ipynb** (modified from Di Carlo's MeasureRGFlow.ipynb):
 
 - All simulation and inference calls updated to pass h and h3.
 - Loss landscapes plotted in the (K1, h), (K1, h3), and (h, h3) planes.
-- RG flow tracked for h0 in {0, 1e-5, 1e-4, 1e-3, 5e-3} with h3 = 0.
+- RG flow tracked for h0 in {0, 1e-5, 1e-4, 1e-3, 5e-3} with h3 = 0. Each h0 value was run as a separate notebook (one per subfolder under `notebooks/runs/`) since the full run required Google Colab's compute rather than a local machine. `notebooks/MeasureRGFlow_odd_operators_template.ipynb` is the generic version (edit the `h` value near the top and rerun) used to produce each of these runs.
 
 ---
 
@@ -74,11 +74,29 @@ where tau_n^t = sigma_n(t) / (1 + exp(2 H_n sigma_n(t))).
     |-- CITATION.cff
     |-- LICENSE
     |-- requirements.txt
+    |-- theory/                        # analytical work: thesis LaTeX source and compiled PDF
+    |   |-- TFM_template.tex
+    |   |-- TFM_template.pdf
+    |   |-- ref.tex
+    |   |-- TFM_templateNotes.bib
+    |   |-- jheppub.sty
     |-- src/
     |   |-- IsingRG_3spin.py
     |-- notebooks/
-    |   |-- MeasureRGFlow_odd_operators.ipynb
-    |-- figures/
+    |   |-- MeasureRGFlow_odd_operators_template.ipynb   # generic notebook: set h near the top and run
+    |   |-- runs/                       # executed runs, one subfolder per h0 value, run on Google Colab
+    |       |-- h0_0/MeasureRGFlow_odd_operators.ipynb
+    |       |-- h0_1e-5/MeasureRGFlow_odd_operators.ipynb
+    |       |-- h0_1e-4/MeasureRGFlow_odd_operators.ipynb
+    |       |-- h0_1e-3/MeasureRGFlow_odd_operators.ipynb
+    |       |-- h0_5e-3/MeasureRGFlow_odd_operators.ipynb
+    |-- figures/                        # final figures used in the thesis
+        |-- RG_flow.png
+        |-- h.png
+        |-- h3.png
+        |-- ising_blocking.png
+        |-- loss_landscapes/
+        |-- GD_convergence/
 
 ---
 
@@ -93,21 +111,26 @@ where tau_n^t = sigma_n(t) / (1 + exp(2 H_n sigma_n(t))).
 | Learning rate | eta = 0.025 |
 | Gradient descent iterations | ~7000 per block size |
 | Values of h0 simulated | 0, 1e-5, 1e-4, 1e-3, 5e-3 |
+| Compute environment | Google Colab (all runs executed there; not run locally) |
 
 ---
 
 ## How to run
 
+**To inspect existing results:** each notebook under `notebooks/runs/h0_*/` already contains its output cells, so the RG flow results can be inspected directly on GitHub or by opening the file, without re-running anything.
+
+**To reproduce or extend the results:** use `notebooks/MeasureRGFlow_odd_operators_template.ipynb`, the generic version of the notebook. Set `h` (and `h3`) near the top to the value you want to simulate and run the whole notebook — this is exactly how each of the `notebooks/runs/h0_*/` notebooks was produced. The full runs (L = 240, ~7000 gradient descent iterations per block size) were done on Google Colab; reproducing them locally requires comparable compute.
+
 **On Google Colab (recommended):**
 
-Open notebooks/MeasureRGFlow_odd_operators.ipynb directly in Colab. Upload src/IsingRG_3spin.py to the Colab session or mount your Drive. No local installation needed.
+Open notebooks/MeasureRGFlow_odd_operators_template.ipynb directly in Colab. Upload src/IsingRG_3spin.py to the Colab session or mount your Drive. No local installation needed.
 
 **Locally:**
 
     git clone https://github.com/juanagranadosr/ising_odd_RG_flow.git
     cd ising_odd_RG_flow
     pip install -r requirements.txt
-    jupyter notebook notebooks/MeasureRGFlow_odd_operators.ipynb
+    jupyter notebook notebooks/MeasureRGFlow_odd_operators_template.ipynb
 
 ---
 
@@ -132,4 +155,4 @@ This code was developed as part of a master's thesis:
 
 > J. Granados, *The hierarchy problem and GOOFY symmetries*, Master's thesis, Universitat de Barcelona, 2025.
 
-(Link to be added upon publication.)
+The analytical derivations are in [theory/TFM_template.pdf](theory/TFM_template.pdf) (LaTeX source: [theory/TFM_template.tex](theory/TFM_template.tex)).
