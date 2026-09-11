@@ -74,12 +74,9 @@ where tau_n^t = sigma_n(t) / (1 + exp(2 H_n sigma_n(t))).
     |-- CITATION.cff
     |-- LICENSE
     |-- requirements.txt
-    |-- theory/                        # analytical work: thesis LaTeX source and compiled PDF
-    |   |-- TFM_template.tex
-    |   |-- TFM_template.pdf
-    |   |-- ref.tex
-    |   |-- TFM_templateNotes.bib
-    |   |-- jheppub.sty
+    |-- manuscript/                     # analytical work: full thesis and defense slides
+    |   |-- TFM_JUANA_GRANADOS.pdf
+    |   |-- TFM_present.pdf
     |-- src/
     |   |-- IsingRG_3spin.py           # extended Hamiltonian library
     |   |-- IsingRG.py                 # thin `from IsingRG_3spin import *` shim, see below
@@ -164,4 +161,4 @@ This code was developed as part of a master's thesis:
 
 > J. Granados, *The hierarchy problem and GOOFY symmetries*, Master's thesis, Universitat de Barcelona, 2025.
 
-The analytical derivations are in [theory/TFM_template.pdf](theory/TFM_template.pdf) (LaTeX source: [theory/TFM_template.tex](theory/TFM_template.tex)).
+The full thesis, including the analytical derivations, is in [manuscript/TFM_JUANA_GRANADOS.pdf](manuscript/TFM_JUANA_GRANADOS.pdf); defense slides are in [manuscript/TFM_present.pdf](manuscript/TFM_present.pdf).
