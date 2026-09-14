@@ -25,6 +25,25 @@ references:
       (magnetic field h and three-spin coupling h3) to both the
       forward simulation and the inverse inference.
 
+  - type: thesis
+    authors:
+      - family-names: Granados Rodríguez
+        given-names: Juana
+    title: >
+      Symmetry Protection and the Hierarchy Problem: From Lattice
+      Models to Goofy
+    thesis-type: Master's thesis
+    institution:
+      name: Universitat de Barcelona, Facultat de Física
+    year: 2026
+    url: https://hdl.handle.net/2445/231453
+    license: CC-BY-NC-ND-4.0
+    notes: >
+      Advisor: Jordi Salvadó Serra. Published in the Universitat de
+      Barcelona's institutional repository (Dipòsit Digital de la UB).
+      Licensed CC BY-NC-ND 4.0, distinct from this repository's MIT
+      license (see LICENSE).
+
 # ---------------------------------------------------------------
 # CITATION 2: This repository (master's thesis extension)
 # ---------------------------------------------------------------
@@ -32,7 +51,7 @@ title: >
   ising_odd_RG_flow: Tracking Z2-odd operators under RG flow
   in the 2D Ising model
 authors:
-  - family-names: Granados
+  - family-names: Granados Rodríguez
     given-names: Juana
     # add your ORCID here if you have one:
     # orcid: https://orcid.org/XXXX-XXXX-XXXX-XXXX
@@ -46,8 +65,9 @@ abstract: >
   the Monte Carlo forward simulation and the pseudo-likelihood
   inverse Ising inference. Used to numerically study symmetry
   protection of odd operators under Kadanoff block-spin
-  renormalization group flow. Developed as part of a master's
-  thesis on the hierarchy problem and GOOFY symmetries.
+  renormalization group flow. Developed as part of the master's
+  thesis "Symmetry Protection and the Hierarchy Problem: From
+  Lattice Models to Goofy" (Universitat de Barcelona, 2026).
 keywords:
   - Ising model
   - renormalization group

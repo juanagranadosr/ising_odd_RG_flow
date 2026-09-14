@@ -1,6 +1,6 @@
 # ising_odd_RG_flow
 
-Extension of [Di Carlo's IsingCG](https://github.com/lucadic/IsingCG) to track Z2-odd operators under renormalization group (RG) flow in the 2D Ising model. Developed as part of a master's thesis on the hierarchy problem and GOOFY symmetries.
+Extension of [Di Carlo's IsingCG](https://github.com/lucadic/IsingCG) to track Z2-odd operators under renormalization group (RG) flow in the 2D Ising model. Developed as part of a master's thesis, *Symmetry Protection and the Hierarchy Problem: From Lattice Models to Goofy*, published by the Universitat de Barcelona: https://hdl.handle.net/2445/231453
 
 ---
 
@@ -159,6 +159,8 @@ See CITATION.cff for how to cite this repository.
 
 This code was developed as part of a master's thesis:
 
-> J. Granados, *The hierarchy problem and GOOFY symmetries*, Master's thesis, Universitat de Barcelona, 2025.
+> J. Granados Rodríguez, *Symmetry Protection and the Hierarchy Problem: From Lattice Models to Goofy*, Master's thesis (advisor: Jordi Salvadó Serra), Universitat de Barcelona, 2026. https://hdl.handle.net/2445/231453
 
-The full thesis, including the analytical derivations, is in [manuscript/TFM_JUANA_GRANADOS.pdf](manuscript/TFM_JUANA_GRANADOS.pdf); defense slides are in [manuscript/TFM_present.pdf](manuscript/TFM_present.pdf).
+The published version is available from the Universitat de Barcelona's institutional repository (Dipòsit Digital de la UB) at the link above. A local copy, including the analytical derivations, is in [manuscript/TFM_JUANA_GRANADOS.pdf](manuscript/TFM_JUANA_GRANADOS.pdf); defense slides are in [manuscript/TFM_present.pdf](manuscript/TFM_present.pdf).
+
+**Note on licensing:** the thesis document itself (the PDF and slides in `manuscript/`) is published under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) via the UB repository — noncommercial use, no derivatives, with attribution. This is separate from the MIT license covering the code in this repository (see [LICENSE](LICENSE)); only the code is MIT-licensed.
